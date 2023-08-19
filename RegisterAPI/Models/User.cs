@@ -10,6 +10,6 @@
 		public string? Pwd { get; set; }
 		public int? Contact { get; set; }
 		public string? Email { get; set; }
-        public DateTime MemberSince { get; set; }
+        public DateTime CreatedOn { get; set; }
     }
 }
