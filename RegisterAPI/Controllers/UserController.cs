@@ -25,7 +25,7 @@ namespace RegisterAPI.Controllers
 		}
 
 		[HttpPost]
-		public async Task<ActionResult<List<User>>> Create(User user)
+		public async Task<ActionResult<List<User>>> CreateUser(User user)
 		{
 			if (_context.Users.Where(u => u.Email == user.Email).FirstOrDefault() != null)
 			{
@@ -39,7 +39,7 @@ namespace RegisterAPI.Controllers
 		}
 
 		[HttpPut]
-		public async Task<ActionResult<List<User>>> UpdateSuperHero(User user)
+		public async Task<ActionResult<List<User>>> UpdateUser(User user)
 		{
 			var dbInsurance = await _context.Users.FindAsync(user.UserID);
 			if (dbInsurance == null)
